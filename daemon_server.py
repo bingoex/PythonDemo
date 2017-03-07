@@ -55,7 +55,7 @@ if '__main__' == __name__:
 	script_path = os.path.split(os.path.realpath(sys.argv[0]))[0]
 	server_daemon = ServerDaemon(script_path + '/server_deamon.pid')
 	if 2 == len(sys.argv):
-		logging.basicConfig(filename = '/data/log/server_daemon.log', \
+		logging.basicConfig(filename = '/tmp/log/server_daemon.log', \
 				level = logging.DEBUG, filemode = 'a', format = '%(asctime)s - %(levelname)s: %(message)s')
 		if 'start' == sys.argv[1]:
 			server_daemon.start()
