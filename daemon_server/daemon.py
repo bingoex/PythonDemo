@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys, os, time, atexit
 from signal import SIGTERM 
+
 class Daemon:
     def __init__(self, pidfile, stdin='/dev/null', stdout='/dev/null', stderr='/dev/null'):
         self.stdin = stdin
@@ -49,7 +50,7 @@ class Daemon:
             pid = None
     
         if pid:
-            message = "pidfile %s already exist. Daemon already running?\n"
+            message = "pidfile %s already exist. Daemon already running\n"
             sys.stderr.write(message % self.pidfile)
             sys.exit(1)
         
@@ -65,7 +66,7 @@ class Daemon:
             pid = None
     
         if not pid:
-            message = "pidfile %s does not exist. Daemon not running?\n"
+            message = "pidfile %s does not exist. Daemon not running\n"
             sys.stderr.write(message % self.pidfile)
             return 
         try:
@@ -87,8 +88,8 @@ class Daemon:
 
     def _run(self):
         """
-        You should override this method when you subclass Daemon. 
-		It will be called after the process has been
-        daemonized by start() or restart().
+        You should override this method 
+		It will be called 
+        after the process has been daemonized by start() or restart().
         """
 

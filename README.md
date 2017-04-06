@@ -1,8 +1,8 @@
 # PythonDeom
-一些Python Demo
+一些Python Demo<br/>
 a lot of py demo
 
-## daemon\_server.py
+## daemon\_server
 一个简单的deamon程序，含继承、调用本机脚本、网络等API
  - subprocess.Popen\poll\read
  - SocketServer.UDPServer\serve\_forever
